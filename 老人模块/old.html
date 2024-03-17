@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <script src="1.js"></script>
+<head>
+    <link rel="stylesheet" type="text/css" href="1.css">
+
+    <title>老年人临终关怀服务网站</title>
+</head>
+<body>
+    <div id="header">
+        <h1>欢迎来到'颐伴'老年全程照护服务平台</h1>
+     <button id="login-button" onclick="showModal()">
+        <img src="image\Img12.png" alt="登录">
+        <span id="welcome-message"></span>  <!-- 使用 span 元素来显示欢迎信息 -->
+    </button>
+         <button id="emergency">紧急按钮</button>           
+        <nav id="nav">
+            <a href="#about">关于我们</a>
+            <a href="#service">服务</a>
+            <a href="#chat-window">法律咨询</a>
+            <a href="#medical-chat-window">健康咨询</a>
+            <a href="#product">医疗产品</a>
+            
+                
+        </nav> 
+    </div>
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span> 关于 </span> 我们 </h1>
+    
+        <div class="row">
+    
+            <div class="video-container",class="fade">
+                <video src="image/Ocean - 19609_x264.mp4 .mp4" loop autoplay muted></video>
+                <h3>遗传</h3>
+            </div>
+    
+            <div class="content",class="fade">
+                <h3>为什么选择我们?</h3>
+                <p>我们拥有更加精致的商品与服务</p>
+                <p>全体团队成员致力于打造一个关爱、便捷、安全的老年服务平台，让每一位老年人都能享受到高质量的全程陪伴服务
+                    我们采用“互联网+陪伴”网站的运作模式进行方案设计及规划，通过网站选择合适的陪护人员、服务项目或种类，同时还要由多方面人员共同介入、负责，其主要任务是减轻病人心理负担、消除负面情绪等。我们还设有住院服务、日间 护理、社区服务、门诊预约、医疗陪护、暂休看护以及丧亲抚慰等服务项目，同时适时开展心理咨询、健康教育、死亡教育、社会支援及其他教育。临终关怀服务不仅为临终者解决生理的诉求，更是能够满足其精神及情感的寄托。</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+    
+        </div>
+    
+    </section>
+<!-- 弹出窗口的HTML结构 -->
+<div id="myModal" class="modal">
+    <!-- 弹出窗口的内容 -->
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-flex-container"> <!-- 新增的div -->
+          <img id="modalImg" src="" alt="服务图片" class="modal-img">
+          <div class="modal-text">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <p id="serviceIntro"></p> <!-- 新增的服务介绍文字区块 -->
+            <button id="addServiceBtn">添加服务</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- 服务列表 -->
+  <div class="service" onclick="openModal('image/Img7.jpg', '卫生照料的介绍', '协助服务对象刷牙、洗脸、洗脚、洗头、梳头、修剪指（趾）甲。为不能自理的服务对象清洗阴部、便后洁身。服务对象生活用品的清洗和消毒。')">
+    <h2>卫生照料</h2>
+    <img src="image/Img7.jpg" alt="卫生照料">
+  </div>
+  <!-- 其他服务的div结构类似，只需更改onclick函数的参数和图片路径 -->
+  
+    <div class="service"onclick="openModal('image/Img3.jpg', '生活起居照料的介绍', '为服务对象的居室通风，调节居室温度、湿度、光度；居室保洁，整理服务对象衣物、床上用品，打扫室内卫生。协助不能自理的服务对象穿脱衣服、如厕、翻身，清理生活垃圾和污秽物。')">
+        <h2>生活起居照料</h2>
+        <img src="image\Img3.jpg" alt="生活起居照料">
+    </div>
+    <div class="service"onclick="openModal('image/Img9.jpg', '助餐照料的介绍', '首先，协助服务对象用餐，清理餐后垃圾，清洗、消毒餐具，并且为服务对象配制菜谱、制作营养餐，涵盖为服务对象订餐、送餐。')">
+        <h2>助餐照料</h2>
+        <img src="image\Img9.jpg" alt="助餐照料">
+    </div>
+    <div class="service"onclick="openModal('image/Img1.jpg', '助洗澡的介绍', '首先，协助服务对象淋浴、盆浴、擦洗身子，进行足浴、药浴。针对有需求的对象，协助服务对象外出洗浴。')">
+        <h2>助洗澡服务</h2>
+        <img src="image\Img1.jpg" alt="助洗澡服务">
+    </div>
+    <div class="service"onclick="openModal('image/Img6.jpg', '助洗衣的介绍', '这为服务对象清洗、熨烫衣服，定期清洗、更换床单、被褥，并且提供衣物的集中取送洗服务。')">
+        <h2>助洗衣服务</h2>
+        <img src="image\Img6.jpg" alt="助洗衣服务">
+    </div>
+    <div class="service"onclick="openModal('image/Img4.jpg', '助行服务的介绍', '陪同服务对象室外散步，协助服务对象外出会友、购物、外出办理其他社会事务。')">
+        <h2>助行服务</h2>
+        <img src="image\Img4.jpg" alt="助行服务">
+    </div>
+    <div class="service"onclick="openModal('image/Img5.jpg', '代办服务的介绍', '为服务对象代领有价证、券（如工资卡、折、现金等）和物品，代购物品和代理交纳各种货用，代办处理信函、文件的收、发事务。')">
+        <h2>代办服务</h2>
+        <img src="image\Img5.jpg" alt="代办服务">
+    </div>
+    <div class="service"onclick="openModal('image/Img8.jpg', '医疗检查服务的介绍', '为服务对象测血压、体温，提醒服务对象吃药，提供预防保健、康复护理及老年人营养、心理健康等知识；并且，提供陪诊照护服务')">
+        <h2>医疗检查服务</h2>
+        <img src="image\Img8.jpg" alt="医疗检查服务">
+    </div>
+         
+<!-- 清除浮动的div -->
+<div style="clear:both;"></div>
+<div id="chat-windows">
+<div id="legal-chat-window1">
+    <div id="chat-messages1">
+        <div class="message lawyer-message">
+            <img src="image\Img10.jpg" alt="律师头像" class="avatar">
+            <div class="bubble">
+                <span class="nickname">张律师</span>
+                <p>请问有什么可以帮助您的吗？</p>
+            </div>
+        </div><!-- 添加律师的消息 -->
+    </div>
+    <input id="chat-input" type="text" placeholder="输入你的问题...">
+    <button id="chat-send">发送</button><!-- 法律咨询窗口的HTML代码 -->
+</div>
+
+<div id="medical-chat-window">
+    <div id="chat-messages2">
+        <div class="message medical-message">
+            <img src="image\Img11.jpg" alt="医生头像" class="avatar">
+            <div class="bubble">
+                <span class="nickname">李医生</span>
+                <p>请问有什么可以帮助您的吗？</p>
+            </div>
+        </div>
+    </div>
+    <input id="chat-input" type="text" placeholder="输入你的问题...">
+    <button id="chat-send">发送</button><!-- 医学咨询窗口的HTML代码 -->
+</div>
+
+<!-- 聊天窗口的HTML代码 -->
+<div id="chat-window">
+    
+</div>
+</div>
+    
+    <div class="product">
+        <img src="" alt="商品图片">
+        <div class="product-info">
+            <h2>待售卖商品</h2>
+            <p>.........................</p>
+        </div>
+        <div class="product-price">
+            <p>￥1234</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="商品图片路径" alt="商品图片">
+        <div class="product-info">
+            <h2>商品名称</h2>
+            <p>商品介绍</p>
+        </div>
+        <div class="product-price">
+            <p>商品价格</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="商品图片路径" alt="商品图片">
+        <div class="product-info">
+            <h2>商品名称</h2>
+            <p>商品介绍</p>
+        </div>
+        <div class="product-price">
+            <p>商品价格</p>
+        </div>
+    </div>
+            
+    <div class="product">
+        <img src="商品图片路径" alt="商品图片">
+        <div class="product-info">
+            <h2>商品名称</h2>
+            <p>商品介绍</p>
+        </div>
+        <div class="product-price">
+            <p>商品价格</p>
+        </div>
+    </div>
+
+    <div id="login-modal" style="display: none;">
+        <form id="login-form" onsubmit="login(event)">
+            <label for="username">用户名</label>
+            <input id="username" type="text" required>
+    
+            <label for="elderly-name">老人姓名</label>
+            <input id="elderly-name" type="text" required>
+    
+            <label for="elderly-id">老人身份证</label>
+            <input id="elderly-id" type="text" required>
+    
+            <label for="phone-number">电话号码</label>
+            <input id="phone-number" type="text" required>
+    
+            <label for="email">邮箱</label>
+            <input id="email" type="email" required>
+    
+            <label for="location">详细位置</label>
+            <input id="location" type="text" required>
+    
+            <button type="submit">登录</button>
+            <button type="button"onclick="closeModal()">关闭</button>
+        </form>
+    </div>
+
+    
+    
+
+    <!-- 弹出窗口的HTML结构 -->
+
+</body>
+
+
+<!-- 页脚开始 -->
+<footer style="background-color: #f2f2f2; color: #333; text-align: center; padding: 20px 0;">
+    <div style="max-width: 1200px; margin: auto;">
+      <!-- 版权信息 -->
+      <p>© 2024 颐伴. 保留所有权利。</p>
+      
+      <!-- 联系方式 -->
+      <p>联系我们: 123456@123.com | 电话: +86 123 456 7890</p>
+      
+      <!-- 免责声明 -->
+      <p>免责声明: 本网站内容仅供参考，不构成任何建议。</p>
+      
+      <!-- 24小时服务热线 -->
+      <p>24小时服务热线: 400-123-4567</p>
+      
+    </div>
+  </footer>
+  <!-- 页脚结束 -->
+  
+</html>
